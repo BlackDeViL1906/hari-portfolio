@@ -1,0 +1,73 @@
+.experience {
+  background: #fff;
+  padding: 3rem 2rem;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.section-header span {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.section-header p {
+  margin: 0;
+  color: #666;
+}
+
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.exp-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  color: #fff;
+  padding: 1.1rem 1rem;
+  border-radius: 0.8rem;
+}
+
+.exp-left {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.index {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #fff;
+  color: #111;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+}
+
+.exp-card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.exp-card p {
+  margin: 0.1rem 0 0;
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.duration {
+  border: 1px solid #fff;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
