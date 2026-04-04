@@ -1,16 +1,23 @@
+import "./Stats.css";
+import checklist from "../../assets/checklist.png";
+import client from "../../assets/clients.png";
+import team from "../../assets/team.png";
+import workingHours from "../../assets/working-hours.png";
+
 const Stats = () => {
     const stats = [
-        { value: "2450", label: "Project Completed" },
-        { value: "1085", label: "Satisfied Clients" },
-        { value: "07", label: "Team Members" },
-        { value: "2790", label: "Working Hours" },
+        { img: checklist, value: "2450", label: "Project Completed", style: { width: "54px", height: "54px" }, borderstyle: { border: "1px solid #969698", borderLeft: "none", borderRight:"none" } },
+        { img: client, value: "1085", label: "Satisfied Clients", style: { width: "64px", height: "64px" }, borderstyle: { border: "1px solid #969698" } },
+        { img: team, value: "07", label: "Team Members", style: { width: "64px", height: "64px" }, borderstyle: { border: "1px solid #969698", borderLeft: "none" } },
+        { img: workingHours, value: "2790", label: "Working Hours", style: { width: "54px", height: "54px" }, borderstyle: { border: "1px solid #969698", borderLeft: "none", borderRight:"none" } },
     ];
 
     return (
         <section className="stats">
             {stats.map((item, idx) => (
-                <div className="stat" key={idx}>
-                    <strong>{item.value}</strong>
+                <div className="stat" key={idx} style={item.borderstyle}>
+                    <img src={item.img} style={item.style}/>
+                    <p style={{fontSize:"2rem", fontWeight:"600"}}>{item.value}</p>
                     <span>{item.label}</span>
                 </div>
             ))}

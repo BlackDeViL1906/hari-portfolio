@@ -1,0 +1,19 @@
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    /* gap: 1rem; */
+    /* background: #fff; */
+    padding: 3rem 9rem;
+    /* margin: 1rem 0; */
+    /* border-radius: 10px; */
+    /* box-shadow: 0 8px 20px rgba(0, 0, 0, .05); */
+    --bg: #f7f7f7;
+    --muted: #666;
+    --accent: #000;
+}
+
+.stat {
+    padding: 1rem;
+    /* border: 1px solid #838487; */
+    line-height: 3rem;
+}

@@ -1,0 +1,76 @@
+.contact {
+    --bg: #f7f7f7;
+    --muted: #666;
+    --accent: #000;
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .06);
+    margin-bottom: 2rem;
+}
+
+.contact-header {
+    width: 100%;
+}
+
+.contact h2 {
+    font-size: 80px;
+    text-align: center;
+    color: #2D2F37;
+}
+
+.contact p {
+    text-align: center;
+    color: #666;
+    margin-top: 4rem;
+    font-size: 25px;
+}
+
+.contact form {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.contact input {
+    padding: 0.95rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.contact .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.contact .tags span {
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 999px;
+    padding: 0.35rem 0.8rem;
+    font-size: 0.85rem;
+}
+
+.contact button {
+    width: fit-content;
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 0.85rem 1.3rem;
+    cursor: pointer;
+    border-radius: 999px;
+    font-weight: 700;
+}
+
+.contact textarea {
+    resize: vertical;
+    min-height: 120px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 0.9rem 1rem;
+}
+
+.contact small {
+    display: block;
+    margin-top: 0.9rem;
+    color: #777;
+}
