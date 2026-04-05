@@ -1,30 +1,51 @@
 import "./Contact.css";
+import arrow from "../../assets/arrow.svg";
+import { useState } from "react";
 
 const Contact = () => {
-    const topics = ["Mobile App", "Website Design", "Branding", "Webflow Development", "App Design", "Graphic Design", "Wordpress"];
+    const topics = ["Mobile App", "Website Design", "Branding", "Webflow development", "App design", "Graphic design", "Wordpress"];
+    const [selectedTopics, setSelectedTopics] = useState<string[]>([]);
+
+    const toggleTopic = (topic: string) => {
+        setSelectedTopics(prev =>
+            prev.includes(topic)
+                ? prev.filter(t => t !== topic)
+                : [...prev, topic]
+        );
+    };
 
     return (
         <section className="contact">
             <div className="contact-header">
-                <h2><span style={{color:"#8e8e8e"}}>Say Hi!</span> and tell me about </h2>
-                {/* <img src="/assets/hi.png" alt="hi" /> */}
-                <h2>your idea</h2>
-                <p>Have a nice work? Reach out and let’s chat.</p>
+                <h2><span style={{ color: "#b8b8b8" }}>I'd !</span> love to hear from </h2>
+                <div style={{display:"flex", justifyContent:"center"}}>
+                    <img src={arrow} style={{ maxHeight: "15%", maxWidth: "25%", padding:"3rem"}} />
+                    <h2>you</h2>
+                </div>
+                <p>Feel Free to Contact.</p>
             </div>
-            <form>
-                <input placeholder="Name*" required />
-                <input type="email" placeholder="Email*" required />
-                <input placeholder="Company name" />
-                <textarea placeholder="What’s in your mind?" rows={5} />
-
-                <div className="tags">
-                    {topics.map(tag => (
-                        <span key={tag}>{tag}</span>
-                    ))}
+            <form style={{padding:"4rem 8rem"}}>
+                <div className="form-row">
+                    <div className="form-group">
+                        <label>Name:*</label>
+                        <input type="text" placeholder="Your Name" required />
+                    </div>
+                    <div className="form-group">
+                        <label>Email:*</label>
+                        <input type="email" placeholder="your.email@example.com" required />
+                    </div>
                 </div>
 
-                <button type="submit">Send Me</button>
-                <small>I must get back to you within 24 hrs.</small>
+                <div className="form-group full-width">
+                    <label>Subject</label>
+                    <input type="text" placeholder="What is this regarding?" />
+                </div>
+
+                <div className="form-group full-width">
+                    <label>Message*</label>
+                    <textarea placeholder="Your message here..." rows={5} required />
+                </div>
+                <button type="submit" className="submit-btn">Send Me</button>
             </form>
         </section>
     );
