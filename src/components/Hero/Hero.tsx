@@ -1,10 +1,26 @@
 import "./hero.css";
 import profile from "../../assets/profile.png";
+import resume from "../../assets/Harinethesh_Resume.pdf";
 import { FaCheck } from "react-icons/fa6";
 import HeroFooter from "./HeroFooter";
 import { MdArrowDownward } from "react-icons/md";
 
 const Hero = () => {
+    const downloadResume = () => {
+        const link = document.createElement("a");
+        link.href = resume;
+        link.download = "Harinethesh_Resume.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
+    const scrollToContact = () => {
+        const contactSection = document.getElementById("contact");
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: "smooth" });
+        }
+    };
     return (
         <div>
 
@@ -37,8 +53,8 @@ const Hero = () => {
                     </ul>
 
                     <div className="buttons">
-                        <button className="primary" style={{ backgroundColor: "#2D2F37", fontSize: "17px" }}>Let’s Talk</button>
-                        <button className="secondary" style={{ fontSize: "18px" }}>
+                        <button className="primary" style={{ backgroundColor: "#2D2F37", fontSize: "17px" }} onClick={scrollToContact}>Let's Talk</button>
+                        <button className="secondary" style={{ fontSize: "18px" }} onClick={downloadResume}>
                             <div className="button-text-wrapper">
                                 <div style={{ display: "flex", alignItems: "center" }}>
                                     <span className="button-text">Download CV</span>
