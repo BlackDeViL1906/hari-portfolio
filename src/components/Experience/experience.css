@@ -27,18 +27,112 @@
   max-width: 100%;
 }
 
+@media (max-width: 1024px) {
+  .section-header-experience {
+    width: 100vw;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 0 2rem;
+  }
+
+  .exp-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .duration {
+    width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
+  .experience {
+    padding: 2rem 1.5rem;
+  }
+
   .section-header-experience {
     text-align: center;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 1rem;
   }
   
   .section-header-experience > div {
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
   
   .section-header-experience > div > div:last-child {
     margin-top: 1rem;
+  }
+
+  .exp-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem 1rem;
+  }
+
+  .exp-left {
+    flex-direction: column;
+  }
+
+  .exp-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .duration {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience {
+    padding: 1.5rem 1rem;
+  }
+
+  .section-header-experience {
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .section-header-experience > div {
+    width: 100%;
+  }
+
+  .section-header p {
+    font-size: 0.9rem;
+  }
+
+  .exp-list {
+    gap: 0.6rem;
+  }
+
+  .exp-card {
+    padding: 1rem 0.75rem;
+    border: 1px solid #ddd;
+  }
+
+  .index {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+
+  .exp-card h3 {
+    font-size: 0.9rem;
+  }
+
+  .exp-card p {
+    font-size: 0.8rem;
+  }
+
+  .duration {
+    font-size: 12px;
+    padding: 0.25rem 0.6rem;
   }
 }
 

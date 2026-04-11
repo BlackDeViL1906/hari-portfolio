@@ -41,6 +41,17 @@
   color: #fff;
 }
 
+@media (max-width: 1024px) {
+  .site-navbar {
+    padding: 0.8rem 1.5rem;
+  }
+
+  .site-navbar nav a {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.35rem;
+  }
+}
+
 @media (max-width: 768px) {
   .site-navbar {
     padding: 0.8rem 1rem;
@@ -48,5 +59,21 @@
 
   .site-navbar nav {
     display: none;
+  }
+
+  .site-navbar .brand {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-navbar {
+    padding: 0.7rem 0.75rem;
+  }
+
+  .site-navbar .brand {
+    font-size: 0.8rem;
+    letter-spacing: 0px;
   }
 }

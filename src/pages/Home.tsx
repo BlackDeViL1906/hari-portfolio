@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar/Navbar";
 import Hero from "../components/Hero/Hero";
 import Services from "../components/Services/Services";
 import Experience from "../components/Experience/Experience";
+import Achievements from "../components/Achievements/Achievements";
 import CaseStudies from "../components/CaseStudies/CaseStudies";
 import Testimonials from "../components/Testimonials/Testimonials";
 import Stats from "../components/Stats/Stats";
@@ -29,6 +30,9 @@ const Home = () => {
             </section>
             <section id="stats">
                 <Stats />
+            </section>
+            <section id="achievements">
+                <Achievements />
             </section>
             <section id="contact">
                 <Contact />

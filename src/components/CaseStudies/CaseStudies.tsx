@@ -27,7 +27,7 @@ const CaseStudies = () => {
                         <div className="card-content">
                             <span className="card-category">{proj.category || "Web Design"}</span>
                             <h3 className="card-title">{proj.title}</h3>
-                            <a href="#" className="card-link">
+                            <a href={proj.link} className="card-link">
                                 See Details
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M3 13L13 3M13 3H4M13 3V12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>

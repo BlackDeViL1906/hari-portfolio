@@ -1,26 +1,35 @@
+import evaultImg from "../assets/evault.png";
+import lms from "../assets/lms.png";
+import agrifunds from "../assets/agrifunds.png";
+import portfolio from "../assets/portfolio.png";
+
 export const projects = [
     {
-        title: "Innovative designer for a digital age",
-        image: "/p1.png",
-        category: "Brand Strategy",
+        title: "Blockchain-based legal document e-vault",
+        image: evaultImg,
+        category: "Blockchain & Web3",
+        award: "SIH 2023 Finalist",
+        link: "https://github.com/BlackDeViL1906/vault",
+    },
+    {
+        title: "Learning Management System",
+        image: lms,
+        category: "Web Design & Development",
         award: null,
+        link: "https://github.com/BlackDeViL1906/Advanced-Application-Development",
     },
     {
-        title: "Web Design for fintech payment solutions",
-        image: "/p2.png",
-        category: "Web Design",
-        award: "Honorable Mention 2022",
-    },
-    {
-        title: "Minimal Agency website",
-        image: "/p3.png",
-        category: "Web Design",
+        title: "AgriFunds - Offline Transaction Mobile App",
+        image: agrifunds,
+        category: "Mobile App Development",
         award: null,
+        link: "https://github.com/BlackDeViL1906/AgriFunds",
     },
     {
-        title: "SaaS web and app design",
-        image: "/p4.png",
+        title: "Web Portfolio Template",
+        image: portfolio,
         category: "Product Design",
         award: null,
+        link: "https://github.com/BlackDeViL1906/hari-portfolio",
     },
 ];

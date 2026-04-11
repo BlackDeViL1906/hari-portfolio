@@ -1,15 +1,49 @@
 import "./footer.css";
+import { MdMail } from "react-icons/md";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
+  const socialLinks = [
+    {
+      name: "Gmail",
+      url: "mailto:hnethesh@gmail.com",
+      Icon: MdMail
+    },
+    {
+      name: "GitHub",
+      url: "https://github.com/BlackDeViL1906",
+      Icon: FaGithub
+    },
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/harinethesh-j-a7507b27a/",
+      Icon: FaLinkedin
+    },
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/time_traveller18_/",
+      Icon: FaInstagram
+    }
+  ];
+
   return (
     <footer className="site-footer">
-      <div>
-        <span>Dribbble</span>
-        <span>LinkedIn</span>
-        <span>Instagram</span>
-        <span>Behance</span>
+      <div className="social-links">
+        {socialLinks.map((link) => (
+          <a 
+            key={link.name}
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            title={link.name}
+            className="social-link"
+          >
+            <link.Icon className="social-icon" />
+            <span>{link.name}</span>
+          </a>
+        ))}
       </div>
-      <p>Personal portfolio © 2024</p>
+      <p>CopyRight © 2026</p>
     </footer>
   );
 };
