@@ -16,12 +16,12 @@ const Footer = () => {
     },
     {
       name: "LinkedIn",
-      url: "https://www.linkedin.com/in/harinethesh-j-a7507b27a/",
+      url: "https://www.linkedin.com/in/harinethesh/",
       Icon: FaLinkedin
     },
     {
       name: "Instagram",
-      url: "https://www.instagram.com/time_traveller18_/",
+      url: "https://www.instagram.com/_hx_nxtxh._/",
       Icon: FaInstagram
     }
   ];
