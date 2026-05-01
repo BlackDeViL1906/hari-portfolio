@@ -2,17 +2,12 @@
   --bg: #f7f7f7;
     --muted: #666;
     --accent: #000;
-  padding: 3rem 2rem;
+  padding: clamp(1.5rem, 5vw, 3rem) clamp(1rem, 5vw, 2rem);
 }
 
 .section-header-experience {
   position: relative;
-  width: 100vw;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  padding: 0 2rem;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,19 +15,40 @@
   gap: 1rem;
   margin-bottom: 1.4rem;
   text-align: center;
+  padding: 0 clamp(1rem, 5vw, 2rem);
+  overflow: hidden;
 }
 
+/* Override inline flex layout */
 .section-header-experience > div {
-  width: 75%;
-  max-width: 100%;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.5rem !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
+  .section-header-experience > div {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 2rem !important;
+  }
+}
+
+@media (max-width: 768px) {
   .section-header-experience {
-    width: 100vw;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    padding: 0 2rem;
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header-experience {
+    padding: 0 0.75rem;
+    gap: 0.5rem;
   }
 
   .exp-card {
@@ -60,9 +76,9 @@
   }
   
   .section-header-experience > div {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
   }
   
   .section-header-experience > div > div:last-child {
@@ -80,7 +96,7 @@
   }
 
   .exp-card h3 {
-    font-size: 0.95rem;
+    font-size: clamp(0.9rem, 2.5vw, 1.05rem);
   }
 
   .duration {
@@ -100,7 +116,7 @@
   }
 
   .section-header-experience > div {
-    width: 100%;
+    width: 100% !important;
   }
 
   .section-header p {
@@ -114,6 +130,7 @@
   .exp-card {
     padding: 1rem 0.75rem;
     border: 1px solid #ddd;
+    flex-direction: column;
   }
 
   .index {
@@ -137,13 +154,14 @@
 }
 
 .section-header span {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 800;
 }
 
 .section-header p {
   margin: 0;
   color: #666;
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .exp-list {
@@ -157,7 +175,7 @@
   justify-content: space-between;
   align-items: center;
   border: 1px solid #2D2F37;
-  padding: 1.8rem 1.6rem;
+  padding: clamp(1rem, 3vw, 1.8rem) clamp(0.8rem, 3vw, 1.6rem);
 }
 
 .exp-left {
@@ -178,19 +196,55 @@
 
 .exp-card h3 {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: clamp(0.9rem, 2.5vw, 1.05rem);
 }
 
 .exp-card p {
   margin: 0.1rem 0 0;
   opacity: 0.8;
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
 }
 
 .duration {
   padding: 0.35rem 0.9rem;
   border-radius: 999px;
-  font-size: 15px;;
+  font-size: clamp(12px, 2vw, 15px);
+}
+
+/* Override inline heading styles for responsive text */
+.section-header-experience p[style*=\"50px\"] {
+  font-size: clamp(24px, 6vw, 50px) !important;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  line-height: 1.1;
+  margin: 0 !important;
+  padding: 0 !important;
+  padding-bottom: 1.5rem !important;
+}
+
+/* Fix description text wrapping */
+.section-header-experience div > p:not([style*=\"50px\"]) {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  line-height: 1.6;
+  margin: 0 !important;
+  font-size: clamp(13px, 2vw, 16px);
+}
+
+.section-header-experience br {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .section-header-experience p[style*=\"50px\"] {
+    font-size: 24px !important;
+  }
+  
+  .section-header-experience div > p:not([style*=\"50px\"]) {
+    font-size: 13px;
+  }
 }
 
 .divider{

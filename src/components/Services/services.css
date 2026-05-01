@@ -6,24 +6,80 @@
   --accent: #000;
 }
 
+@media (max-width: 1024px) {
+  .services {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services {
+    padding: 1.5rem 0.75rem;
+  }
+}
+
+/* Override inline padding styles */
+.services > div {
+  padding: 2rem clamp(1rem, 5vw, 8rem) 2rem !important;
+}
+
+@media (max-width: 768px) {
+  .services > div {
+    padding: 1.5rem 1rem 1.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .services > div {
+    padding: 1rem 0.75rem 1rem !important;
+  }
+}
+
 .section-header {
   display: flex;
   width: auto;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.3rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .section-header {
+    flex-direction: row;
+  }
 }
 
 .section-header-description {
   max-width: 500px;
   color: #555;
   line-height: 1.6;
-  font-size: 15px;
+  font-size: clamp(14px, 2vw, 15px);
 }
 
-.section-header span {
-  font-size: 2rem;
-  font-weight: 800;
+/* Override inline heading styles */
+.section-header p[style*="50px"] {
+  font-size: clamp(28px, 6vw, 50px) !important;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  line-height: 1.1;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+@media (max-width: 480px) {
+  .section-header p[style*="50px"] {
+    font-size: 28px !important;
+  }
 }
 
 .buttons .primary:hover {
@@ -39,6 +95,8 @@
   cursor: pointer;
   font-weight: 700;
   transition: all 0.25s ease;
+  font-size: clamp(13px, 2vw, 14px);
+  white-space: nowrap;
 }
 
 .section-header button:hover {
@@ -62,8 +120,27 @@
 .section-content {
   display: grid;
   grid-template-columns: minmax(160px, 190px) 1fr;
-  gap: 10rem;
+  gap: clamp(2rem, 5vw, 10rem);
   align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .section-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-content {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-content {
+    gap: 1rem;
+  }
 }
 
 .section-content>div:first-child {
@@ -84,7 +161,7 @@
 
 .section-content h1 {
   margin: 0;
-  font-size: 2.2rem;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
   color: #2d2f37;
 }
 

@@ -1,6 +1,6 @@
 .dot-grid {
   display: grid;
-  padding: 1rem;
+  padding: clamp(0.5rem, 2vw, 1rem);
 }
 
 .dot {
@@ -15,4 +15,10 @@
 
 .dot-grid:hover .dot:nth-child(-n + 25) {
   opacity: 1;
+}
+
+@media (max-width: 480px) {
+  .dot-grid {
+    padding: 0.5rem;
+  }
 }
